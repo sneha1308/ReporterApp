@@ -1,0 +1,379 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+<android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="32dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp">
+
+    <FrameLayout android:id="@+id/frameLayout"
+                 android:layout_width="match_parent"
+                 android:layout_height="wrap_content"
+                 app:layout_constraintStart_toStartOf="parent" android:layout_marginLeft="8dp"
+                 android:layout_marginStart="8dp"
+                 app:layout_constraintEnd_toEndOf="parent"
+                 android:layout_marginEnd="8dp"
+                 android:layout_marginRight="8dp"
+                 android:layout_marginTop="8dp"
+                 app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+                android:id="@+id/llSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_margin="8dp">
+
+
+                <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:hideNameCode="true"
+                        android:layout_marginEnd="8dp"
+                        app:showFlag="false"
+                        app:countryPreference="IN,US,AU"
+                        android:gravity="center"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"/>
+
+                <android.support.design.widget.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    <EditText
+                            android:id="@+id/etEnterMobileNo"
+                            android:maxLines="1"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:focusableInTouchMode="true"
+                            android:imeOptions="actionNext"
+                            android:layout_width="match_parent"
+                            android:hint="@string/hint_enter_mobileNo"
+                            android:maxLength="10"
+                            android:layout_height="wrap_content"/>
+
+                </android.support.design.widget.TextInputLayout>
+
+
+            </LinearLayout>
+            <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    app:layout_constraintStart_toStartOf="@id/etEnterMobileNo"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_weight="1"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etEnterMobileNo">
+
+                <EditText
+                        android:id="@+id/etCreatePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:hint="@string/hint_create_password"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    app:layout_constraintStart_toStartOf="@id/etEnterMobileNo"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/etCreatePassword">
+
+                <EditText
+                        android:id="@+id/etConfirmPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="1"
+                        android:inputType="textPassword"
+                        android:imeOptions="actionDone"
+                        android:hint="@string/hint_confirm_password"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/llReporterDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:visibility="gone"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:orientation="vertical"
+                android:layout_marginRight="8dp">
+
+            <EditText
+                    android:id="@+id/etEnterName"
+                    android:layout_width="match_parent"
+                    android:hint="Enter Name"
+                    android:layout_margin="8dp"
+                    android:inputType="text"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:maxLength="50"
+                    android:layout_height="wrap_content"/>
+
+            <EditText
+                    android:id="@+id/etEnterEmailId"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:hint="Enter Email ID"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:layout_marginRight="8dp"
+                    android:inputType="text"
+                    android:imeOptions="actionNext"
+                    android:maxLines="1"
+                    android:maxLength="60"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content"/>
+            <EditText
+                    android:id="@+id/etEnterLocation"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="24dp"
+                    android:hint="Enter Location"
+                    android:inputType="text"
+                    android:layout_weight="1"
+                    android:focusableInTouchMode="true"
+                    android:imeOptions="actionDone"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/relativeLayout"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:visibility="gone">
+            <TextView
+                    android:id="@+id/tvOtpSignUp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_weight="1"
+                    android:visibility="visible"
+                    android:text="@string/text_otp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="24dp"/>
+
+
+            <LinearLayout
+                    android:id="@+id/llRegistrationOtp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="8dp"
+                    android:orientation="horizontal">
+
+                <EditText
+                        android:id="@+id/editTextOne"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:focusable="true"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:background="@drawable/white_rounded_corners_black_ash"/>
+                <requestFocus/>
+
+                <EditText
+                        android:id="@+id/editTextTwo"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:imeOptions="actionNext"
+                        android:layout_toRightOf="@id/editTextOne"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/white_rounded_corners_black_ash"/>
+                <EditText
+                        android:id="@+id/editTextThree"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:layout_toRightOf="@id/editTextTwo"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:imeOptions="actionNext"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:background="@drawable/white_rounded_corners_black_ash"/>
+                <EditText
+                        android:id="@+id/editTextFour"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:inputType="number"
+                        android:layout_weight="1"
+                        android:layout_toRightOf="@id/editTextThree"
+                        android:maxLength="1"
+                        android:gravity="center"
+                        android:imeOptions="actionDone"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/white_rounded_corners_black_ash"/>
+
+                <TextView
+                        android:id="@+id/tvResendOtp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=" Resend OTP"
+                        android:layout_centerInParent="true"
+                        android:layout_toRightOf="@id/editTextFour"
+                        android:textSize="16dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="4dp"
+                        android:textColor="@color/colorPrimary"/>
+
+            </LinearLayout>
+            <!--
+                        </LinearLayout>
+            -->
+
+        </LinearLayout>
+
+
+    </FrameLayout>
+
+
+    <LinearLayout
+            android:id="@+id/nextButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+                android:id="@+id/tvRegistrationNext"
+                android:layout_width="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_accent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="16dp"
+                android:visibility="visible"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginRight="16dp"
+                android:text="NEXT"
+                android:textColor="#C62828"
+                android:gravity="center"
+                android:layout_height="45dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/verifyButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+                android:id="@+id/tvRegistrationVerify"
+                android:layout_width="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_accent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="16dp"
+                android:visibility="visible"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginRight="16dp"
+                android:text="VERIFY"
+                android:textColor="#C62828"
+                android:gravity="center"
+                android:layout_height="45dp"/>
+    </LinearLayout>
+    <LinearLayout
+            android:id="@+id/submitButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:weightSum="1"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/frameLayout"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+                android:id="@+id/tvRegistrationSubmit"
+                android:layout_width="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_corners_accent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginLeft="16dp"
+                android:visibility="visible"
+                android:layout_marginTop="32dp"
+                android:layout_marginBottom="32dp"
+                android:layout_marginRight="16dp"
+                android:text="SUBMIT"
+                android:textColor="#C62828"
+                android:gravity="center"
+                android:layout_height="45dp"/>
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
+</ScrollView>

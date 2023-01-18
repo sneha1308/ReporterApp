@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "99348832866",
+    "firebase_url": "https://total-telugu.firebaseio.com",
+    "project_id": "total-telugu",
+    "storage_bucket": "total-telugu.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99348832866:android:d4d814cfa4bfc05d",
+        "android_client_info": {
+          "package_name": "com.example.reporterapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99348832866-phuah4cccv05cadf41ma38v4sqkgqedq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.reporterapp",
+            "certificate_hash": "d203e4357a8082636ef555157431f111c656a7aa"
+          }
+        },
+        {
+          "client_id": "99348832866-ndvchu4c0kpvkpc7v0dhie4pkf61k3i6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkb27u2JU7iNHZMqN9lKD4_BaN3krXyhc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "99348832866-5afav565gpij62cfqt78s88a0kmos8mt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "99348832866-8pdhq9i4fjlqi78rlr6qu30ql9gtu6dc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.cdshyd.reporter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+    <TextView
+            android:id="@+id/tvTabTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/tw__composer_white"
+            tools:text="Tab 1"
+            android:layout_marginLeft="8dp"
+            android:textSize="16sp"/>
+
+    <TextView
+            android:visibility="gone"
+            android:textColor="#000000"
+            android:id="@+id/tvTabItemCount"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text=""
+            android:background="@drawable/accent_filled_circle"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginRight="8dp"/>
+
+</LinearLayout>

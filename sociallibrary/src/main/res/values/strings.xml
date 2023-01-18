@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">SocialLibrary</string>
+    <string name="facebook_app_id">452037772288012</string>
+    <string name="fb_login_protocol_scheme">fb452037772288012</string>
+
+    <!--<string name="CONSUMER_KEY">DgFFKahR15NHtTVj9iIsJTWYM</string>
+    <string name="CONSUMER_SECRET">zRmhpmyw3d2SbS4ThIeTWbsHCxRLQezfQ7s2fxl4RmegF0aJAS</string>
+-->
+    <string name="CONSUMER_KEY">q4C2B28e4kttsotmAEat6Uwhe</string>
+    <string name="CONSUMER_SECRET">WcnO5OBnQn84Qi7lelyn2fPLWJky1PAqWDOfTVqMXCITYfOumK</string>
+
+    <string name="web_application_client_id">99348832866-ndvchu4c0kpvkpc7v0dhie4pkf61k3i6.apps.googleusercontent.com</string>
+    <string name="web_application_client_secret">ouHer23UkrDL1Her-yUHQ5Xv</string>
+</resources>

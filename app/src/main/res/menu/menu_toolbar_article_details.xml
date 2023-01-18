@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+            android:id="@+id/action_send"
+            android:icon="@mipmap/send"
+            android:title="deleteArticle"
+            app:showAsAction="always"/>
+    <item
+            android:id="@+id/action_edit"
+            android:icon="@mipmap/write"
+            android:title="editArticle"
+            app:showAsAction="always"/>
+    <item
+            android:id="@+id/action_deleted"
+            android:icon="@mipmap/delete"
+            android:title="deleteArticle"
+            app:showAsAction="always"/>
+    <!--<item
+            android:id="@+id/action_draft"
+            android:title="Draft"/>
+    <item
+            android:id="@+id/action_rework"
+            android:title="Rework"/>
+    <item
+            android:id="@+id/action_pending"
+            android:title="Pending"/>
+    <item
+            android:id="@+id/action_published"
+            android:title="Published"/>
+    <item
+            android:id="@+id/action_rejected"
+            android:title="Rejected"/>-->
+
+</menu>

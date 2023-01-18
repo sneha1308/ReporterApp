@@ -1,0 +1,12 @@
+query GetArticleCategoriesList{
+  getCategories{
+  id
+  categoryname
+  subcategorySet{
+  subcategoryname
+  Subcategorydescription
+  modifiedAt
+  id
+}
+  }
+}

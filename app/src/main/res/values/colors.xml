@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#C62828</color>
+    <color name="colorPrimaryDark">#B60424</color>
+    <color name="colorAccent">#C62828</color>
+    <color name="colorDivider">#CCCCCC</color>
+    <color name="colorDividerDark">#878787</color>
+    <color name="notificationCircle">#ffb400</color>
+    <color name="black">#000000</color>
+    <color name="colorCommentBackground">#ffebc4</color>
+    <color name="white">#ffffff</color>
+    <color name="articleColor">#f1f1f1</color>
+    <color name="articleFontColor">#00599e</color>
+    <color name="redColor">#ff0000</color>
+
+</resources>

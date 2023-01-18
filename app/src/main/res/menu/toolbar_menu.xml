@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+            android:id="@+id/articleWorks">
+        <item
+                android:id="@+id/action_draft"
+                android:title="Draft"/>
+        <item
+                android:id="@+id/action_rework"
+                android:title="Rework"/>
+        <item
+                android:id="@+id/action_pending"
+                android:title="Pending"/>
+        <item
+                android:id="@+id/action_published"
+                android:title="Published"/>
+        <item
+                android:id="@+id/action_rejected"
+                android:title="Rejected"/>
+
+
+   android:id="@+id/accountAndLogout">
+        <item
+                android:id="@+id/action_my_account"
+                android:title="My Account"/>
+        <item
+                android:id="@+id/action_logout"
+                android:title="Logout"/>
+
+    <item
+            android:id="@+id/action_search"
+            android:icon="@mipmap/search"
+            android:title="search"
+            app:actionViewClass="android.support.v7.widget.SearchView"
+            app:showAsAction="ifRoom|collapseActionView"/>
+    <item
+            android:id="@+id/action_notification"
+            android:icon="@mipmap/notifications_icon"
+            android:title="notification"
+            app:actionLayout="@layout/action_notification"
+            app:showAsAction="always"/>
+</menu>

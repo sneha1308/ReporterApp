@@ -1,0 +1,234 @@
+
+#Getting all the languages from server
+query GetLanguages{
+getLanguages{
+          id
+          languagename
+       languagedescription
+       languagelocality
+}
+}
+
+query GetProfile($token:String!){
+GetProfile(token:$token){
+username
+dateJoined
+firstName
+profilephoto
+  password
+  mobilenumber
+email
+lastLogin
+location
+    isVerifiedByAdmin
+
+profilephoto
+profileSet{
+landline
+DOB
+address1
+address2
+address3
+}
+socialSet{
+provider
+url
+}
+}
+}
+
+query getDashboardArticlesByToken($datetimestamp:String,$token:String!){
+    getDashboardArticles(datetimestamp:$datetimestamp,
+        token:$token,sortby:"desc",orderby: "createdDate", articleType:"article") {
+
+        articletitle
+        articledescription
+        attachmentsSet{
+            filename
+        }
+        articlekeywordsSet{
+            keywords{
+                keyword
+            }
+        }
+        language{
+            languagename
+        }
+        article{
+            createdDate
+            modifiedAt
+            commentsSet{
+                comment
+                commentsTo
+                modifiedAt
+                commentsBy{
+                    username
+                }
+                role
+
+            }
+            id
+            articlestatusSet {
+                statusname
+                globalStatus
+            }
+        }
+        category {
+            id
+            categoryname
+        }
+        subcategory {
+            subcategoryname
+            Subcategorydescription
+            id
+        }
+        location
+        featuredImage
+    }
+}
+
+
+
+#Api to create User
+mutation CreateUser($email: String!,$mobilenumber: String!,$password: String!,$username: String!,$location: String,$role: String!,$countryCode: String!){
+createUser(email:$email, password:$password, mobilenumber:$mobilenumber, username:$username,location:$location,rolename:$role,countryCode:$countryCode)
+{
+  user{
+    username
+    password
+  }
+}
+}
+
+#Api to Login User and get the token which will be stored in preference manager
+mutation LoginUser($email: String!, $password: String!){
+    tokenAuth (email:$email, password: $password){
+        token
+        user{
+            email
+        }
+    }
+}
+
+mutation Login($username: String!, $password: String!){
+    login (userName:$username, password: $password){
+       user{
+           user{
+               username
+               email
+               isVerifiedByAdmin
+               role{
+                   role
+               }
+           }
+           token
+       }
+    }
+}
+
+#posing an article to server with required fields
+mutation CreateArticle($articleData: ArticleInput!, $token: String!){
+createArticle(articleData:$articleData, token : $token){
+  article {
+    articletitle
+      article{
+          id
+          modifiedAt
+      }
+
+  }
+}
+}
+
+mutation UpdateArticle($article:UpdateArticleInput!,$token:String!){
+    updateArticleById(articleData:$article,token:$token){
+        article {
+            articletitle
+            article{
+                id
+                modifiedAt
+                articlestatusSet{
+                    statusname
+                }
+            }
+
+        }
+    }
+}
+
+mutation updateProfile($profile:ProfileInput!,$token:String!){
+
+ updateProfile(profileData:$profile,token:$token){
+
+  profile{
+
+    qualification
+
+  }
+
+}
+
+}
+
+mutation ChangePassword($newpassword: String!,$oldpassword: String!,$token: String!,){
+  changePassword(newpassword:$newpassword,oldpassword:$oldpassword,token:$token){
+    user{
+      id
+      password
+      mobilenumber
+    }
+
+  }
+
+}
+
+mutation GenerateOtp($mobile: String!, $country: String!, $isResend: Boolean!, $isForgot: Boolean!) {
+    generateOtp(mobile:$mobile,country:$country,isResend:$isResend,isForgot:$isForgot){
+        generateOtp{
+            isSuccess
+            message
+        }
+    }
+}
+
+mutation VerifyOtp($mobile: String!, $otp: String!, $isForgot: Boolean!) {
+    verifyOtp(mobile:$mobile,otp:$otp,isForgot:$isForgot){
+        verifyOtp{
+            isSuccess
+            message
+        }
+    }
+}
+
+mutation ResetPassword($mobile: String!, $newPassword: String!) {
+    resetPassword(mobile:$mobile,newPassword:$newPassword){
+        resetPassword{
+            isSuccess
+            message
+        }
+    }
+}
+
+mutation SocialAuth($accessToken: String!, $provider: String!){
+    socialAuth(accessToken:$accessToken,provider:$provider){
+        social{
+            user{
+                email
+                role{
+                    role
+                }
+            }
+
+        }
+        token
+    }
+}
+
+mutation DeleteArticle($articleId:Int!,$token:String!) {
+    deleteArticle(token:$token,articleId:$articleId){
+        deleteArticle{
+            status
+            message
+        }
+    }
+}

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.CreateArticleActivity"
+        android:id="@+id/complete">
+
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <LinearLayout
+                android:id="@+id/llCreateArticle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="2dp"
+                android:orientation="vertical">
+
+            <LinearLayout
+                    android:id="@+id/llArticleCredentials"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tvLanguage"
+                        android:layout_width="match_parent"
+                        android:text="Languages"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+
+                <TextView
+                        android:id="@+id/tvCategories"
+                        android:layout_width="match_parent"
+                        android:text="Category"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llArticleCredentialsDropDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/llArticleCredentials"
+                    android:layout_marginTop="8dp">
+
+                <Spinner
+                        android:id="@+id/tvSelectLanguage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:dropDownWidth="wrap_content"
+                        style="@style/AppTheme.PopupOverlay"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/background_spinner"/>
+
+                <Spinner
+                        android:id="@+id/tvSelectCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:dropDownWidth="wrap_content"
+                        android:padding="8dp"
+                        android:autofillHints="Select Category"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/background_spinner"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llArticleSubCategoryCredentials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <TextView
+                        android:id="@+id/tvTitleSubCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Sub Category"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"/>
+
+                <TextView
+                        android:id="@+id/tvLocation"
+                        android:layout_width="match_parent"
+                        android:text="Location"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:layout_weight="1"
+                        android:layout_marginRight="16dp"
+                        android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:id="@+id/llArticleSubCategoryCredentialsDropDown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    app:layout_constraintTop_toBottomOf="@+id/llArticleSubCategoryCredentials"
+                    android:layout_marginTop="8dp">
+
+                <Spinner
+                        android:id="@+id/spinnerSubCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:padding="8dp"
+                        android:autofillHints="Select Sub Category"
+                        android:dropDownWidth="wrap_content"
+                        style="@style/AppTheme.PopupOverlay"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="8dp"
+                        android:background="@drawable/background_spinner"/>
+
+
+                <EditText
+                        android:id="@+id/etArticleLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="8dp"
+                        android:maxLines="1"
+                        android:maxLength="25"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:background="@drawable/white_rounded_corners_black_ash"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="16dp"
+                        android:layout_weight="1"/>
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tvTitleArticle"
+                    android:layout_width="match_parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spinnerSubCategory"
+                    android:layout_height="wrap_content"
+                    android:text="Article Title"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"/>
+
+            <EditText
+                    android:id="@+id/etArticleTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleArticle"
+                    android:background="@drawable/white_rounded_corners_black_ash"
+                    android:padding="8dp"
+                    android:imeOptions="actionNext"
+                    android:inputType="text"
+                    android:maxLength="100"
+                    android:layout_marginTop="8dp"
+                    android:hint="Enter Article Title"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+            <TextView
+                    android:id="@+id/tvTitleArticleDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/etArticleTitle"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Article"
+                    android:textStyle="bold"/>
+
+
+            <EditText
+                    android:id="@+id/etArticleDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp"
+                    android:background="@drawable/white_rounded_corners_black_ash"
+                    app:layout_constraintTop_toBottomOf="@id/tvTitleArticleDescription"
+                    android:hint="Enter Article Description"
+                    android:gravity="top"
+                    android:inputType="textMultiLine"
+                    android:enabled="true"
+                    android:imeOptions="actionNext"
+                    android:isScrollContainer="true"
+                    android:scrollbars="vertical"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:focusable="true"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:padding="4dp"/>
+
+            <TextView
+                    android:id="@+id/tvTitleKeywords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Keywords (use Comma seperated)"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/etArticleDescription"/>
+            <EditText
+                    android:id="@+id/etKeywords"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/white_rounded_corners_black_ash"
+                    tools:hint="Reporter"
+                    app:layout_constraintTop_toBottomOf="@+id/tvTitleKeywords"
+                    android:hint="Enter Keywords"
+                    android:padding="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+            <TextView
+                    android:id="@+id/tvAttachedFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:text="Attached Files"
+                    android:textStyle="bold"
+                    app:layout_constraintTop_toBottomOf="@+id/etArticleDescription"/>
+
+            <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rvAttachedFiles"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingBottom="4dp"
+                    android:layout_marginTop="8dp">
+            </android.support.v7.widget.RecyclerView>
+        </LinearLayout>
+    </ScrollView>
+
+    <include layout="@layout/layout_fab_submenu"/>
+
+</android.support.constraint.ConstraintLayout>
